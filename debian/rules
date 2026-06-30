@@ -1,0 +1,21 @@
+#! /usr/bin/make -f
+
+export PYBUILD_NAME=[package_name]
+%:
+	dh $@ --with quilt,python3 --buildsystem=pybuild
+
+# Use xz compression for the .deb package
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
+
+# Rebuild the Frida hooks
+override_dh_auto_build:
+	dh_auto_build
+	npm run build
+
+# Shipped in the tarball, modified after a build:
+override_dh_clean:
+	dh_clean
+	rm -rf [package_name].egg-info/
+
+

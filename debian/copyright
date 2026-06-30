@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: [package_name]
+Upstream-Contact: U+039b hello@pts-project.org
+Source: https://github.com/PiRogueToolSuite/[package_name]
+
+Files: *
+Copyright: 2024   U+039b <hello@pts-project.org>
+                  Defensive Lab Agency <contact@defensive-lab.agency>
+License: GPL-3.0+
