@@ -1,21 +1,20 @@
-#! /usr/bin/make -f
+#!/usr/bin/make -f
 
-export PYBUILD_NAME=[package_name]
+export PYBUILD_NAME=pirogue_admin_web
 %:
 	dh $@ --with quilt,python3 --buildsystem=pybuild
 
-# Use xz compression for the .deb package
+override_dh_install:
+	dh_install
+	mkdir debian/pirogue-admin-web/usr/sbin
+	mv debian/pirogue-admin-web/usr/bin/pirogue-admin-web debian/pirogue-admin-web/usr/sbin
+
+override_dh_installsystemd:
+	dh_installsystemd pirogue-admin-web.service
+
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
 
-# Rebuild the Frida hooks
-override_dh_auto_build:
-	dh_auto_build
-	npm run build
-
-# Shipped in the tarball, modified after a build:
 override_dh_clean:
 	dh_clean
-	rm -rf [package_name].egg-info/
-
-
+	rm -rf pirogue_admin_web.egg-info/

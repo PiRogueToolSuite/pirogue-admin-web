@@ -1,18 +1,31 @@
-Source: [package_name]
+Source: pirogue-admin-web
 Section: misc
 Priority: optional
 Maintainer: U+039b <hello@pts-project.org>
 Build-Depends:
  debhelper-compat (= 13),
- quilt,
  dh-python,
+ pybuild-plugin-pyproject,
+ pirogue-admin-client,
  python3-all,
+ python3-flask,
+ python3-gunicorn,
  python3-setuptools,
+ python3-yaml,
+ quilt,
+ systemd,
 Standards-Version: 4.5.1
-Homepage: https://github.com/PiRogueToolSuite/[package_name]
+Homepage: https://github.com/PiRogueToolSuite/pirogue-admin-web
+Rules-Requires-Root: no
 
-Package: [package_name]
+Package: pirogue-admin-web
 Architecture: all
-Depends: ${misc:Depends},
- ${python3:Depends}
-Description: [package_description]
+Depends:
+ pirogue-admin-client (>= 2.0.8),
+ python3-flask,
+ python3-gunicorn,
+ python3-yaml,
+ ${python3:Depends},
+ ${misc:Depends},
+Description: PiRogue administration web version
+ This package features the web version of pirogue-admin-client.

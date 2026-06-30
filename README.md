@@ -1,8 +1,9 @@
 <div align="center">
 <img width="60px" src="https://pts-project.org/android-chrome-512x512.png">
-<h1>[Repository name]</h1>
+<h1>PiRogue Admin Web</h1>
 <p>
-This repository contains the source code of [description]. 
+This repository embeds pirogue-admun-vue in a standalone Flask web-server
+to provide PiRogue adminstration as a complete web version.
 </p>
 <p>
 License: GPLv3
@@ -14,21 +15,18 @@ License: GPLv3
 </p>
 </div>
 
+## Project Setup
 
-## How to use this template
+```shell
+npm install
+```
 
-1. Delete all unnecessary folders and files depending on the type of project.
+### Compile and Minify for Production
 
-2. Specify the name of the package (Python and/or Debian) by replacing `[package_name]` in the files:
-* `./setup.py:6`
-* `./setup.py:11`
-* `./debian/rules:3`
-* `./debian/rules:19`
-* `./debian/control:1`
-* `./debian/control:12`
-* `./debian/control:14`
-* `./debian/copyright:2`
-* `./debian/copyright:4`
+```shell
+npm run build
+```
 
-3. Specify the description of the package (Python and/or Debian) by replacing `[package_description]` in the file:
-* `./setup.py:10`
+```shell
+debuild -b
+```

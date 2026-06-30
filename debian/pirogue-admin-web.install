@@ -1,0 +1,2 @@
+dist/*                        usr/share/pirogue-admin-web/htdocs/
+external-exposure-conf.d/*    usr/share/pirogue-external-exposure/services.conf.d/

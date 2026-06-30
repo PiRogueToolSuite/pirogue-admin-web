@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools==66.1.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pirogue_admin_web*"]
+namespaces = false
+
+
+[project]
+name = "pirogue-admin-web"
+version = "1.0.0"
+description = "Administration web backend and frontend"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+
+requires-python = ">= 3.9"
+dependencies = [
+  "pirogue_admin_client>=2.0.8",
+  "Flask>=2.2.2",
+  "gunicorn==20.1.0",
+  "pyyaml",
+  "Werkzeug==2.2.2",
+]
+
+authors = [
+  {name = "Christophe Andral", email = "christophe@andral.fr"},
+]
+
+maintainers = [
+  {name = "U+039b", email = "hello@pts-project.org"}
+]
+
+[project.scripts]
+pirogue-admin-web = "pirogue_admin_web:serve"
+
+[project.urls]
+repository = "https://github.com/PiRogueToolSuite/pirogue-admin"
+issues = "https://github.com/PiRogueToolSuite/pirogue-admin/issues"
