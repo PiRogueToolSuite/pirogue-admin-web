@@ -21,7 +21,7 @@ Rules-Requires-Root: no
 Package: pirogue-admin-web
 Architecture: all
 Depends:
- pirogue-admin-client (>= 2.0.8),
+ pirogue-admin-client (>= 3.0.0),
  python3-flask,
  python3-gunicorn,
  python3-yaml,
