@@ -1,9 +1,9 @@
-pirogue-admin-web (3.0.0) UNRELEASED; urgency=medium
+pirogue-admin-web (3.0.0) trixie; urgency=medium
 
   * Build for trixie.
   * Bump pirogue-admin-client to 3.0.0 accordingly.
 
- -- Cyril Brulebois <cyril@debamax.com>  Mon, 26 Oct 2026 00:33:01 +0100
+ -- Cyril Brulebois <cyril@debamax.com>  Mon, 26 Oct 2026 10:24:49 +0100
 
 pirogue-admin-web (1.0.0) bookworm; urgency=medium
 
