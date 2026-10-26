@@ -10,7 +10,8 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# will be reenabled later when npm build is included to the deb build
+# dist/
 downloads/
 eggs/
 .eggs/
